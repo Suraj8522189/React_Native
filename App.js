@@ -16,7 +16,7 @@ export default function App() {
         <Text style={styles.label}> PASSWORD </Text>
         <TextInput style={styles.input} placeholder='Strong Password'  />
 
-         <Button  title='Signup me'  style={{"backgroundColor": '#ea7d7d'}}></Button>
+         <Button  title='Signup me'></Button>
       </View>
      
       <StatusBar style="auto" />
