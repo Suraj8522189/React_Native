@@ -19,6 +19,11 @@ export default function App() {
          <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Sign Up</Text>
           </TouchableOpacity>
+
+      <Text>Already have an account??
+        
+      </Text>
+
       </View>
      
       <StatusBar style="auto" />
