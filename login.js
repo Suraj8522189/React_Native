@@ -1,4 +1,4 @@
-import { StatusBar } from "expo-status-bar";
+
 import { StyleSheet,Text, TextInput, View, TouchableOpacity } from "react-native";
 
 
@@ -37,13 +37,13 @@ const styles = StyleSheet.create({
     },
       from:{
     width: '85%',
-    padding:'30',
+    padding:30,
     backgroundColor:'white',
     borderRadius: 50,
   },
   heading:{
     fontSize:25,
-    fontWeight:'600',
+    fontWeight:600,
     marginBottom:20,
   },
     label:{
