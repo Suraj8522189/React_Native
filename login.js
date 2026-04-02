@@ -1,8 +1,7 @@
-
 import { StyleSheet,Text, TextInput, View, TouchableOpacity } from "react-native";
 
 
-export default function Login(){
+export default function Login({navigation}){
 
     return(
 
@@ -12,14 +11,23 @@ export default function Login(){
         <Text style={styles.label}>E-Mail</Text>
         <TextInput style={styles.input} placeholder="Enter The E-Mail"  />
          <Text style={styles.label}>Password</Text>
-        <TextInput style={styles.input} placeholder="Enter The Password"  />
+        <TextInput style={styles.input} placeholder="Enter The Password" secureTextEntry={true} />
         
         <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Sign Up</Text>
+        <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
 
         <Text>Create New Account??{''}
-            
+        <Text 
+        style={{color: 'blue'}} 
+        onPress={() => navigation.navigate('Signup')} > Signup </Text>
+               
+        </Text>
+         <Text>Go Home!!{''}
+        <Text 
+        style={{color: 'blue'}} 
+        onPress={() => navigation.navigate('Home')} > Home </Text>
+               
         </Text>
         </View>
 
@@ -43,7 +51,7 @@ const styles = StyleSheet.create({
   },
   heading:{
     fontSize:25,
-    fontWeight:600,
+    fontWeight:'600',
     marginBottom:20,
   },
     label:{
@@ -59,7 +67,7 @@ const styles = StyleSheet.create({
   borderColor:"red"
  },
  button:{
-  backgroundColor:"red",
+  backgroundColor:"green",
   padding:12,
   borderRadius:8,
   alignItems:"center",

@@ -4,7 +4,7 @@ import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-nativ
 export default function Signup({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>Welcome To Singup Page</Text>
+      <Text style={styles.heading}>Welcome To Signup Page</Text>
       
       <View style={styles.from}>
         <Text style={styles.label}> USERNAME </Text>
@@ -14,13 +14,18 @@ export default function Signup({ navigation }) {
         <Text style={styles.label}> Contact </Text>
         <TextInput style={styles.input} placeholder='Enter The Number' />
         <Text style={styles.label}> PASSWORD </Text>
-        <TextInput style={styles.input} placeholder='Strong Password'  />
+        <TextInput style={styles.input} placeholder='Strong Password' secureTextEntry={true}  />
 
-       <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-  <Text style={{ marginTop: 10, textAlign: 'center', color: 'blue' }}>
-    Already have an account? Login
-  </Text>
-  </TouchableOpacity>
+      <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>Signup</Text>
+            </TouchableOpacity>
+    
+            <Text>Already have an account?{''}
+            <Text 
+            style={{color: 'blue'}} 
+            onPress={() => navigation.navigate('Login')} > Login </Text>
+                
+            </Text>
 
       </View>
      
@@ -45,7 +50,7 @@ const styles = StyleSheet.create({
   },
   heading:{
     fontSize:25,
-    fontWeight:600,
+    fontWeight:'600',
     marginBottom:20,
   },
   label:{
@@ -58,19 +63,19 @@ const styles = StyleSheet.create({
   borderWidth:2,
   padding:10,
   borderRadius:15,
-  borderColor:"blue"
+  borderColor:"red"
  },
-// button:{
-//   backgroundColor:"red",
-//   padding:12,
-//   borderRadius:8,
-//   alignItems:"center",
-//   marginTop:15
-// },
-// buttonText:{
-//   color:"#fff",
-//   fontSize:16,
-//   fontWeight:"bold"
-// }
+button:{
+  backgroundColor:"green",
+  padding:12,
+  borderRadius:8,
+  alignItems:"center",
+  marginTop:15
+},
+buttonText:{
+  color:"#fff",
+  fontSize:16,
+  fontWeight:"bold"
+}
 
 });       
