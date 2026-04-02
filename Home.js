@@ -12,7 +12,7 @@ export default function Home({ navigation }) {
 
       <TouchableOpacity 
         style={styles.button}
-        onPress={() => alert("Profile Coming Soon")}
+        onPress={() => navigation.navigate("nav")}
       >
         <Text style={styles.buttonText}>Go to Profile</Text>
       </TouchableOpacity>
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
     color: "#fff",
     fontWeight: "bold",
-    marginBottom: 20,
+    marginBottom: 40,
   },
 
   card: {
